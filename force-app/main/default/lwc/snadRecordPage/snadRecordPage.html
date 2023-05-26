@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Snad Developers" icon-name="standard:account">
+       <div>
+        
+        <lightning-input  value={name} label="Name" name="SnadName" onchange={handleName}></lightning-input>
+        <lightning-input value={org} label="Org" name="SnadOrg" onchange={handleOrg}></lightning-input>
+
+        
+        
+            <lightning-button label="Save" onclick = {CreateRecord}></lightning-button>
+        
+    </div>
+ 
+    <div if:true= {recordList}>
+        
+            <lightning-card title="Snad Developer List" icon-name="standard:account">
+                <lightning-datatable key-field="id" data={recordList}  columns={columns}> </lightning-datatable>
+            </lightning-card>
+        
+    </div>
+    </lightning-card>
+</template>
