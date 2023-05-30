@@ -1,6 +1,6 @@
 public with sharing class AccountController {
     public AccountController() {
-
+     //this is the controller to add for apex classes
     }
 
     @AuraEnabled(cacheable = true)
